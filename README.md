@@ -66,7 +66,8 @@ Thus, Wallet Mitra was born — **automation over discipline**.
 ---
 
 ## 📸 **Screenshots**
- 
+ <img width="1600" height="1600" alt="image" src="https://github.com/user-attachments/assets/4bac788a-96d2-42ca-be3d-9136a62f9311" />
+
 ---
 
 ## 🔧 **Setup Instructions**
