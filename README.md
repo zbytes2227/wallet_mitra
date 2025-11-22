@@ -1,11 +1,14 @@
+ 
 # **Wallet Mitra 💰**
 
-### *An effortless expense-management app with automatic Bank-SMS transaction tracking.*
+### *An effortless expense-management app with automatic Bank-SMS transaction tracking — built with Flutter.*
 
-Wallet Mitra is a simple, clean, and lightweight Android app built to solve a very real problem:
+Wallet Mitra is a simple, clean, and lightweight expense manager built for people like me who **want to track expenses… but absolutely hate entering them manually**.
+So instead of manually adding every chai, bus fare, and online payment — **Wallet Mitra auto-reads Bank SMS and adds transactions automatically.**
 
-👉 **We all want to track expenses, but nobody wants to manually add every single transaction.**
-So Wallet Mitra does that part for you — automatically.
+Lazy-friendly ✔️
+Accurate ✔️
+Effortless ✔️
 
 ---
 
@@ -13,60 +16,57 @@ So Wallet Mitra does that part for you — automatically.
 
 ### ✅ **Automatic Expense Tracking (Bank SMS Parsing)**
 
-Wallet Mitra reads your bank SMS (securely on-device) and auto-adds income/expense transactions into your ledger.
+Wallet Mitra securely reads incoming bank messages on-device and instantly logs your expenses and credits.
 
 ### 🎯 **Minimal & Intuitive UI**
 
-A simple interface showing:
+A smooth Flutter UI showing:
 
 * Total Balance
 * Total Spent
-* Monthly Expense List
-* Search & Filter Support
+* Monthly Transaction List
+* Color-coded Income/Expense entries
+* Search & Filters
 
 ### 📅 **Monthly Breakdown**
 
-Scroll through months easily and check past transactions.
+View all your expenses month-by-month with a clean scrollable selector.
 
-### ➕ **Manual Add (If You Still Want To 😄)**
+### ➕ **Manual Add (If Needed 😄)**
 
-Add custom transactions for cash or non-SMS expenses.
+Add cash expenses or any custom transaction manually.
 
-### 📲 **Fully Offline**
+### 🔐 **100% Offline**
 
-All data stays on your device. No servers, no cloud, no tracking.
+All data lives on your device.
+No servers. No analytics. No tracking.
 
 ---
 
-## 🧠 **Why I Built This?**
+## 🧠 **Why I Built This**
 
-There are hundreds of expense apps.
-But *I’m too lazy to add each transaction manually*.
-So I built Wallet Mitra with one goal:
+There are tons of expense apps — but none solved *my* problem:
 
-> **If the bank already sends me an SMS for every transaction… why not let the app do the work?**
+> **I’m too lazy to manually enter transactions.**
 
-Automation > Discipline ✔️
+Bank SMS already tells me everything…
+So why not let the app do the heavy lifting?
+
+Thus, Wallet Mitra was born — **automation over discipline**.
 
 ---
 
 ## 🛠️ **Tech Stack**
 
-* **Kotlin**
-* **Jetpack Compose**
-* **Room Database**
-* **SMS Broadcast Receiver**
-* **Material 3 UI**
-* **MVVM Architecture**
+* **Flutter**
+* **Dart**  
+* **SMS Receiver Plugin**
+* **Material Design UI**
 
 ---
 
 ## 📸 **Screenshots**
-
-*(Images from `./screenshots/` or use the one you uploaded)*
-
-![App Screenshot](/mnt/data/a2e11b05-ca55-422c-b89e-e3005e6103a0.png)
-
+ 
 ---
 
 ## 🔧 **Setup Instructions**
@@ -76,50 +76,39 @@ Automation > Discipline ✔️
    ```bash
    git clone https://github.com/your-username/wallet-mitra.git
    ```
-2. Open the project in **Android Studio**.
-3. Enable **SMS permission** in the manifest.
-4. Run on a real device (SMS reading doesn't work on emulator).
-5. You're good to go!
+2. Open the project in **Android Studio** or **VS Code**.
+3. Run `flutter pub get`.
+4. Add required SMS permissions in `AndroidManifest.xml`:
+
+   ```xml
+   <uses-permission android:name="android.permission.RECEIVE_SMS" />
+   <uses-permission android:name="android.permission.READ_SMS" />
+   ```
+5. Run on a **real device** (SMS reading doesn't work on most emulators).
+6. Start receiving automatic expense logs. 🎉
 
 ---
 
 ## 📜 **Permissions**
 
-| Permission    | Why it's needed                                  |
-| ------------- | ------------------------------------------------ |
-| `RECEIVE_SMS` | To auto-detect bank transactions from SMS.       |
-| `READ_SMS`    | Required by some OEMs to read incoming messages. |
+| Permission    | Why it's needed                                |
+| ------------- | ---------------------------------------------- |
+| `RECEIVE_SMS` | Detect bank messages instantly.                |
+| `READ_SMS`    | Required by some devices to parse SMS content. |
 
-> 📌 *All SMS parsing happens locally. No data leaves your device.*
-
----
-
-## 🗺️ **Roadmap**
-
-* [ ] Export to CSV
-* [ ] Category-wise insights
-* [ ] Dark mode
-* [ ] Budget planner
-* [ ] Backup/Restore
+> ⚠️ **All SMS reading is processed locally. No data ever leaves the device.**
 
 ---
-
+ 
 ## 🤝 **Contributing**
 
-Pull requests are welcome!
-If you're suggesting major changes, open an issue first to discuss what you’d like to modify.
+PRs are welcome!
+If proposing a major change, please open an issue first.
 
 ---
 
 ## 💬 **Feedback**
 
-Got ideas? Suggestions? Found a bug?
-Feel free to open an issue or ping me on LinkedIn.
-
----
-
-## ⭐ **Support**
-
-If you find this helpful, consider giving the repo a **⭐** — it helps a lot!
-
+Have ideas or feature suggestions?
+Open an issue — I’d love to hear from you!
  
